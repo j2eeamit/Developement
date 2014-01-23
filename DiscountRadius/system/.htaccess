@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /DiscountRadius/
+RewriteCond $1 !^(images|stylesheets|javascript)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /DiscountRadius/index.php/$1 [L]
